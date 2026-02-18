@@ -51,7 +51,8 @@ public class AnalyticsCounter {
 //
 //    }
     public void writeSymptoms(Map<String, Integer> symptoms){
-      this.writer.writeSymptoms(symptoms);
+
+        this.writer.writeSymptoms(symptoms);
     }
 
 

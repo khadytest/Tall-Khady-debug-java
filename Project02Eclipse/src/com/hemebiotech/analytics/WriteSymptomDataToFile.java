@@ -10,11 +10,10 @@ import java.util.Map;
 public class WriteSymptomDataToFile implements ISymptomWriter{
 
     private String filepath;
-    private Integer file2;
 
-    public WriteSymptomDataToFile(String filepath, Integer file2) {
+    public WriteSymptomDataToFile(String filepath) {
         this.filepath = filepath;
-        this.file2 =file2;
+
     }
 
 

@@ -8,11 +8,11 @@ public class Main {
     public static void main(String[] args) {
         ISymptomReader iSymptomReader = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
 
-        ISymptomWriter iSymptomWriter = new WriteSymptomDataToFile("Project02Eclipse/write.txt", 2);
+        ISymptomWriter iSymptomWriter = new WriteSymptomDataToFile("Project02Eclipse/write.txt");
 
         AnalyticsCounter analyticsCounter = new AnalyticsCounter(iSymptomReader, iSymptomWriter);
         List<String> symptomList = analyticsCounter.getSymptoms();
-
+000
 
 
        Map<String, Integer> symptMap = analyticsCounter.countSymptoms(symptomList);
@@ -21,6 +21,9 @@ public class Main {
            Integer value = symptMap.get(key);
            System.out.println("key" + key + "value = " + value);
        }
+
+
+
 
     }
 }
