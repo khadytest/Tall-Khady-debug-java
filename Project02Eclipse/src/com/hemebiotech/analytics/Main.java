@@ -12,7 +12,6 @@ public class Main {
 
         AnalyticsCounter analyticsCounter = new AnalyticsCounter(iSymptomReader, iSymptomWriter);
         List<String> symptomList = analyticsCounter.getSymptoms();
-000
 
 
        Map<String, Integer> symptMap = analyticsCounter.countSymptoms(symptomList);
