@@ -1,10 +1,8 @@
 package com.hemebiotech.analytics;
 
-import javax.sound.sampled.Line;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.*;
 
 
@@ -24,9 +22,7 @@ public class AnalyticsCounter {
         return reader.GetSymptoms();
     }
 
-    public int addition(int a, int b){
-        return a+b;
-    }
+
 
     public Map<String, Integer> countSymptoms(List<String> symptoms) {
         Map<String, Integer> map = new HashMap<>();
@@ -41,15 +37,20 @@ public class AnalyticsCounter {
         return map;
     }
 
-//    public Map<String, Integer> sortSymptoms(Map<String, Integer> symptoms){
-//        Map<String, Integer> mapSymtoms = new HashMap<>();
-//        for (String elem : symptoms.keySet()){
-//            Integer value = symptoms.get(elem);
-//
-//        }
-//        return  mapSymtoms;
-//
-//    }
+    public Map<String, Integer> sortSymptoms(Map<String, Integer> symptoms){
+       TreeMap<String, Integer> map = new TreeMap<>(symptoms);
+       for (String element : symptoms.keySet()){
+
+       }
+
+
+
+
+       return map;
+
+    }
+
+
     public void writeSymptoms(Map<String, Integer> symptoms){
 
         this.writer.writeSymptoms(symptoms);
@@ -81,7 +82,7 @@ public class AnalyticsCounter {
             line = reader.readLine();
         }
 
-        FileWriter writer = new FileWriter("result.out");
+        FileWriter writer = new FileWriter("/home/khady/Tall-Khady-debug-java/result.out");
         writer.write("headache: " + headacheCount + "\n");
         writer.write("rash: " + rashCount + "\n");
         writer.write("dialated pupils: " + pupilCount + "\n");

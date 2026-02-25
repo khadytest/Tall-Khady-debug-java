@@ -11,15 +11,16 @@ public class Main {
         ISymptomWriter iSymptomWriter = new WriteSymptomDataToFile("Project02Eclipse/write.txt");
 
         AnalyticsCounter analyticsCounter = new AnalyticsCounter(iSymptomReader, iSymptomWriter);
-        List<String> symptomList = analyticsCounter.getSymptoms();
+
+        List<String> liste = analyticsCounter.getSymptoms();
+        System.out.println(liste);
+
+        Map<String, Integer> mapcount = analyticsCounter.countSymptoms(liste);
+        System.out.println(mapcount);
 
 
-       Map<String, Integer> symptMap = analyticsCounter.countSymptoms(symptomList);
 
-       for(String key : symptMap.keySet()){
-           Integer value = symptMap.get(key);
-           System.out.println("key" + key + "value = " + value);
-       }
+
 
 
 
