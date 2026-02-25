@@ -40,11 +40,9 @@ public class AnalyticsCounter {
     public Map<String, Integer> sortSymptoms(Map<String, Integer> symptoms){
        TreeMap<String, Integer> map = new TreeMap<>(symptoms);
        for (String element : symptoms.keySet()){
+           map.put(element, symptoms.get(element));
 
        }
-
-
-
 
        return map;
 
